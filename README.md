@@ -9,7 +9,7 @@ the operation using the LEDs of the device.
 ## Usage
 
 Once you have a server that can serve a `.ota` file to the Finder Opta via
-Ethernet, extract the `.zip` file and open the project in PLC IDE. Next, eudit
+Ethernet, extract the `.zip` file and open the project in PLC IDE. Next, edit
 the update path in the sketch:
 
 ```cpp
@@ -29,7 +29,7 @@ real time!
 
 ### Running an update server
 
-If you do not have a server that can server OTA updates but you still would
+If you do not have a server that can provide OTA updates but you still would
 like to test out this example, we provide a `.ota` in the `assets` subfolder of
 this directory. The easiest way to serve this file to the Finder Opta would be
 the barebone Python HTTP server. To do so, execute the following command in the
@@ -39,7 +39,7 @@ root directory of this project:
 python3 -m http.server -d ./assets -b <IP_ADDRESS>
 ```
 
-Now simply edit the path using the same IP address provided in the above
+Now simply edit the update path in the sketch using the same IP address provided in the above
 command. The provided `.ota` file, contains a sketch that will make the LEDs
 blink, so that you can easily tell when the update has been applied.
 
